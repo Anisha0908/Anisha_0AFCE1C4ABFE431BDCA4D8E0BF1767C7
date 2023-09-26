@@ -1,9 +1,13 @@
-def CheckLeap(Year):    
-  if((Year % 400 == 0) or  
-     (Year % 100 != 0) and  
-     (Year % 4 == 0)):   
-    print("Given Year is a leap Year");    
-  else:  
-    print ("Given Year is not a leap Year")  
-Year = int(input("Enter the year: ")) 
-CheckLeap(Year)
+def linear_search_product(product_list, target_product):
+    indices = []
+    for i, product in enumerate(product_list):
+        if product == target_product:
+            indices.append(i)
+          
+    return indices 
+  
+products = ['shoes','boot','loafer','shoes','sandal','shoes']
+
+target_product = 'shoes'
+result = linear_search_product(products, target_product)
+print(result)
